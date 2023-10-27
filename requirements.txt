@@ -1,0 +1,5 @@
+apache-airflow
+sqlparse
+apache-airflow-providers-postgres 
+apache-airflow-providers-docker
+pandas
