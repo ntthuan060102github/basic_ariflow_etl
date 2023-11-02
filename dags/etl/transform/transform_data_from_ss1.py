@@ -12,5 +12,5 @@ def transform_data_from_ss1(ti):
     df = pd.DataFrame(json.loads(dataset[0]), columns=["nk", "full_name", "gender", "arrival_time", "departure_time"])
     df['gender'] = df['gender'].map({'M': True, 'F': False})
     df = df.assign(source_system=1)
-    
+
     return json.dumps(df.to_dict(), cls=CustomJSONEncoder)

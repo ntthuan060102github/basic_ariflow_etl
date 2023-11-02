@@ -28,11 +28,10 @@ db_params = {
     'port': '5432'   # default is 5432
 }
 
-connection = psycopg2.connect(**db_params)
-cursor = connection.cursor()
+conn = psycopg2.connect(**db_params)
+cursor = conn.cursor()
 cursor.execute("SELECT * FROM CustomerVisit")
 result = json.dumps(cursor.fetchall(), cls=CustomJSONEncoder)
-print(result)
 df = pd.DataFrame(json.loads(result), columns=["id", "full_name", "gender", "arrival_time", "departure_time"])
 df = df.assign(source_system=1)
-print(df)
+print(df.to_sql("CustomerAttendanceLog", conn, index=False, method="multi"))

@@ -4,7 +4,7 @@ import pandas as pd
 from helpers.custom_json_encoder import CustomJSONEncoder
 
 def transform_data_from_ss3(ti):
-    dataset = ti.xcom_pull(task_ids=["extract_data_from_ss2"])
+    dataset = ti.xcom_pull(task_ids=["extract_data_from_ss3"])
 
     if not dataset:
         raise Exception("Empty data set!")
