@@ -1,0 +1,6 @@
+id;customer_name;gender;arrival_time;departure_time
+1;Nguyen Trong Thuan;M;2023-10-29 15:00:00;2023-10-29 16:00:00
+2;Trinh Thi Tuyet Nhung;F;2023-10-29 15:20:00;2023-10-29 15:30:00
+3;Vo Ngoc Son;M;2023-10-30 07:00:00;2023-10-30 10:00:00
+4;Huynh Quoc Thai;M;2023-10-30 20:00:00;2023-10-30 22:00:00
+5;Nguyen Trong Binh;M;2023-10-30 08:00:00;2023-10-30 12:00:00
