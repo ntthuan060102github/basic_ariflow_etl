@@ -9,8 +9,9 @@ def transform_data_from_ss2(ti):
     if not dataset:
         raise Exception("Empty data set!")
     
-    df = pd.DataFrame(json.loads(dataset[0]), columns=["nk", "full_name", "gender", "arrival_time", "departure_time"])
+    df = pd.DataFrame(json.loads(dataset[0]), columns=["nk", "full_name", "gender", "arrival_time", "departure_time", "created_at", "last_updated"])
     df['gender'] = df['gender'].map({'male': True, 'female': False})
     df = df.assign(source_system=2)
-
+    df.drop(['created_at', 'last_updated'], axis=1)
+    
     return json.dumps(df.to_dict(), cls=CustomJSONEncoder)

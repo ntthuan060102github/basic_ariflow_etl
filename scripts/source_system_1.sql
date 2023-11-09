@@ -5,7 +5,9 @@ CREATE TABLE CustomerVisit(
     "customer_name" varchar(100) NULL,
     "gender" varchar(1) NULL,
     "arrival_time" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    "departure_time" TIMESTAMP WITH TIME ZONE DEFAULT NULL
+    "departure_time" TIMESTAMP WITH TIME ZONE DEFAULT NULL,
+    "created_at" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    "last_updated" TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO CustomerVisit (customer_name, gender, arrival_time, departure_time)

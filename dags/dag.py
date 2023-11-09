@@ -1,5 +1,6 @@
 from datetime import timedelta
 from config import CET
+
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.dummy import DummyOperator
